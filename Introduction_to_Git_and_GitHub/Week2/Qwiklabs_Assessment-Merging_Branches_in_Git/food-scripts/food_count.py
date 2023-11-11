@@ -16,5 +16,6 @@ with open("favorite_foods.log", "r") as f:
 sort_foods = sorted(counter.items(), key = lambda x : x[1], reverse = True)
 
 # Prints out the liked foods
+print("Favourite foods, from most popular to least popular")
 for i in range(len(sort_foods)):
     print("{}, {}".format(sort_foods[i][0], sort_foods[i][1]))

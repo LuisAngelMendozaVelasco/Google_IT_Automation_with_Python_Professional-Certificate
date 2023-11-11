@@ -12,7 +12,6 @@ def process_csv(csv_file):
     
 def data_to_html(title, data):
     """Turns a list of lists into an HTML table"""
-
     # HTML Headers
     html_content = """
 <html>
@@ -37,8 +36,6 @@ td, th {
 </head>
 <body>
 """
-
-
     # Add the header part with the given title
     html_content += "<h2>{}</h2><table>".format(title)
 
@@ -56,9 +53,7 @@ td, th {
     html_content += """</tr></table></body></html>"""
     return html_content
 
-
 def write_html_file(html_string, html_file):
-
     # Making a note of whether the html file we're writing exists or not
     if os.path.exists(html_file):
         print("{} already exists. Overwriting...".format(html_file))
@@ -87,6 +82,7 @@ def main():
     
     if ".html" not in html_file:
         print('Missing ".html" file extension from second command-line argument!')
+        
         print("Exiting program...")
         sys.exit(1)
     

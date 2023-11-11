@@ -7,10 +7,10 @@ counter = {}
 with open("favorite_foods.log", "r") as f:
     for line in f:
         food_item = line.strip()
-        if item not in counter:
-            counter[item] = 1
+        if food_item not in counter:
+            counter[food_item] = 1
         else:
-            counter[item] += 1
+            counter[food_item] += 1
 
 # Print out all the available liked foods
 print("Select your favorite food below:")
